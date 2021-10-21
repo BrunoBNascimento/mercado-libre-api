@@ -9,12 +9,11 @@ module.exports = {
         api.get(`/items/${id}`),
         api.get(`/items/${id}/description`),
       ]);
-      console.log(details.data, description.data)
-      
+
         return {
             "author": {
-                "name": "Fulano",
-                "lastname": "De tal",
+                "name": "Bruno",
+                "lastname": "Benicio",
             },
             item: itemDetailsFactory({ ...details.data, description })
           }
@@ -24,8 +23,8 @@ module.exports = {
 
         return {
             "author": {
-                "name": "Fulano",
-                "lastname": "De tal",
+                "name": "Bruno",
+                "lastname": "Benicio",
             },
             categories: categoriesFactory(filters),
             items: results.slice(0, 4).map(itemFactory)
